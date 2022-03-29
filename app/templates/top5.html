@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>Just kidding, digimon are better.</h2>
+
+{% for digi in digis %}
+    <!-- <div class="card m-2" style="width: 18rem;">
+        <img src="{{digi.img}}" alt="" class="card-img-top">
+        <div class="card-body"></div>
+    </div> -->
+
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{digi.img}}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ digi.name }}</h5>
+              <h6 class="card-subtitle"">Tamer: {{ digi.tamer }}</h6>
+              <p class="card-text">{{ digi.text }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+
+{% endblock content %}
